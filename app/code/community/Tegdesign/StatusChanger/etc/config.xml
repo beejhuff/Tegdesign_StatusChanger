@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Tegdesign_StatusChanger>
+            <version>0.0.1</version>
+        </Tegdesign_StatusChanger>
+    </modules>
+    <global>
+        <helpers>
+            <statuschanger>
+                <class>Tegdesign_HeroSlider_Helper</class>
+            </statuschanger>
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <statuschanger>
+                <use>admin</use>
+                <args>
+                    <module>Tegdesign_StatusChanger</module>
+                    <frontName>statuschanger</frontName>
+                </args>
+            </statuschanger>
+        </routers>
+    </admin>
+    <adminhtml>
+        <events>
+            <core_block_abstract_prepare_layout_before>
+                <observers>
+                    <statuschanger_core_block_abstract_prepare_layout_before>
+                        <class>Tegdesign_StatusChanger_Model_Observer</class>
+                        <method>addMassAction</method>
+                    </statuschanger_core_block_abstract_prepare_layout_before>
+                </observers>
+            </core_block_abstract_prepare_layout_before>
+        </events>
+    </adminhtml>
+</config>
