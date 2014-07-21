@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Mmm_StatusChanger>
+        <Tegdesign_StatusChanger>
             <active>true</active>
             <codePool>community</codePool>
-        </Mmm_StatusChanger>
+        </Tegdesign_StatusChanger>
     </modules>
 </config>
